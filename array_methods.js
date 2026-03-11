@@ -52,3 +52,44 @@ let s = "elbow"
 let t = "below"
 
 console.log(s.split("").sort().join("") === t.split("").sort().join("") ? "anagram" : "not anagram");
+
+// fill(val, start, end)
+// concat() : returns new array
+
+// copyWithin(target, start, end) : modifies original array : copy the eles of the same array within the array at the specific index
+let a = [10, 20, 30, 40, 50]
+a.copyWithin(2, 0, 2)
+
+console.log(a); // [ 10, 20, 10, 20, 50 ]
+
+// flat() : returns new array : can accept numbers or "Infinity" -> number represents the number of layers i want to remove
+let b = [10, 20, [30, 40, [50, 60]]]
+
+console.log(b);
+console.log(b.flat(1));
+console.log(b.flat(2));
+console.log(b.flat(Infinity));
+
+let c = [7, 1, 5, 4, 3, 2, 6]
+
+console.log(c.reduce((a, b) => a + b));
+console.log(c.reduce((a, b) => a * b));
+console.log(c.map(ele => ele**2));
+c.forEach(ele => console.log(ele))
+console.log(c.filter(ele => ele%2 == 1));
+
+const obj = { a: 1, b: 2 };
+for (const key in obj) {
+  console.log(key); // a, b
+}
+
+const d = [10, 20, 30];
+for (const value of d) {
+  console.log(value); // 10, 20, 30
+}
+
+let e = [11, 13, 15]
+console.log(e.some(ele => {})); // callback function will return undefined and it is a falsey value : falsey values : 0, 0n, undefined, null, NaN, false, ''
+
+let f = [0, 0n, null, NaN, 10]
+console.log(f.find(ele => ele));
