@@ -93,3 +93,6 @@ console.log(e.some(ele => {})); // callback function will return undefined and i
 
 let f = [0, 0n, null, NaN, 10]
 console.log(f.find(ele => ele));
+
+let g = [10, 11, 12, 13, 14]
+console.log(g.filter((ele, i) => i)); // first i = 0 => falsey value => 10 will not be returned // [ 11, 12, 13, 14 ]
